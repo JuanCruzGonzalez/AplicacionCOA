@@ -2,6 +2,7 @@
   "name": "electron-operations-app",
   "version": "1.0.0",
   "main": "src/main.js",
+  "description": "Aplicación para gestionar operaciones COA",
   "scripts": {
     "start": "electron-forge start",
     "build": "electron-forge make",
@@ -11,7 +12,8 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",
-    "electron-store": "^8.0.0"
+    "electron-store": "^8.0.0",
+    "update-electron-app": "^3.1.1"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.4.2",

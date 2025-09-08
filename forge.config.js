@@ -1,15 +1,14 @@
 module.exports = {
   packagerConfig: {
     asar: true,
-    icon: '/path/to/icon'
   },
   publishers: [
     {
       name: '@electron-forge/publisher-github',
       config: {
         repository: {
-          owner: 'github-user-name',
-          name: 'github-repo-name'
+          owner: 'JuanCruzGonzalez',
+          name: 'AplicacionCOA'
         },
         prerelease: false,
         draft: true

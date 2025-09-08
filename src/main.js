@@ -30,7 +30,7 @@ const ensureFilesDirectory = () => {
   }
   return filesDir;
 };
-
+require('update-electron-app')()
 app.whenReady().then(() => {
   ensureFilesDirectory();
 
