@@ -1,0 +1,23 @@
+# node modules
+node_modules/
+
+# build output
+out/
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+
+# Electron Forge packaging
+*.asar
+
+# Environment files
+.env
+
+# VS Code settings
+.vscode/
