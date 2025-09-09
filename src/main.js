@@ -3,6 +3,19 @@ const path = require('path');
 const fs = require('fs');
 const storage = require('./storage');
 
+// Configurar actualizaciones solo si estamos en producción y es necesario
+if (app.isPackaged) {
+  try {
+    require('update-electron-app')({
+      repo: 'JuanCruzGonzalez/AplicacionCOA',
+      updateInterval: '1 hour',
+      logger: require('electron-log')
+    });
+  } catch (error) {
+    console.log('Auto-updater not available:', error.message);
+  }
+}
+
 const createWindow = () => {
   const win = new BrowserWindow({
     show: false,
@@ -30,7 +43,7 @@ const ensureFilesDirectory = () => {
   }
   return filesDir;
 };
-require('update-electron-app')()
+
 app.whenReady().then(() => {
   ensureFilesDirectory();
 
