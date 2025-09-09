@@ -1,7 +1,6 @@
 module.exports = {
   packagerConfig: {
     asar: true,
-    icon: './assets/icon', // Opcional: ruta a tu icono (sin extensión)
     win32metadata: {
       CompanyName: "Juan Cruz Gonzalez",
       ProductName: "AplicacionCOA",
@@ -27,27 +26,15 @@ module.exports = {
     {
       name: '@electron-forge/maker-squirrel',
       config: {
-        // Configuración para crear accesos directos
-        setupIcon: './assets/icon.ico', // Icono del instalador
-        iconUrl: 'https://raw.githubusercontent.com/JuanCruzGonzalez/AplicacionCOA/main/assets/icon.ico', // URL del icono
-        loadingGif: './assets/loading.gif', // Opcional: GIF de carga
-        
-        // Crear accesos directos
+        // Crear accesos directos sin icono personalizado
         setupExe: 'AplicacionCOA-Setup.exe',
         
         // Configuración de accesos directos
-        shortcutName: 'AplicacionCOA',
+        name: 'AplicacionCOA',
         
         // Metadatos adicionales
         authors: 'Juan Cruz Gonzalez',
-        description: 'Aplicación COA para gestión de operaciones',
-        
-        // Crear acceso directo en escritorio y menú inicio
-        createDesktopShortcut: true,
-        createStartMenuShortcut: true,
-        
-        // Carpeta en menú inicio
-        setupMsi: 'AplicacionCOA'
+        description: 'Aplicación COA para gestión de operaciones'
       },
     },
     {
